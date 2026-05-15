@@ -50,14 +50,14 @@ body{
 /* ================= PAGE ================= */
 
 .page-wrapper{
-    padding:20px 0 35px;
+    padding:12px 0 25px;
 }
 
 /* ================= CONTAINER ================= */
 
 .container-custom{
-    width:95%;
-    max-width:1600px;
+    width:90%;
+    max-width:1200px;
     margin:auto;
 }
 
@@ -80,7 +80,7 @@ body{
 
 .main-title{
     color:var(--primary-dark);
-    font-size:42px;
+    font-size:32px;
     font-weight:800;
     margin-bottom:4px;
     line-height:1.1;
@@ -88,7 +88,7 @@ body{
 
 .main-sub{
     color:var(--primary);
-    font-size:20px;
+    font-size:17px;
     font-weight:700;
 }
 
@@ -135,21 +135,21 @@ body{
 .info-card{
     background:#fff;
     border:1px solid var(--border);
-    border-radius:14px;
-    padding:18px;
+    border-radius:12px;
+    padding:14px;
     height:100%;
     box-shadow:0 2px 6px rgba(176,18,74,0.05);
 }
 
 .info-icon{
-    width:52px;
-    height:52px;
+    width:42px;
+    height:42px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
     color:#fff;
-    font-size:20px;
+    font-size:16px;
 }
 
 .blue{
@@ -169,14 +169,14 @@ body{
 }
 
 .info-title{
-    font-size:14px;
+    font-size:13px;
     color:#64748b;
     font-weight:600;
     margin-bottom:3px;
 }
 
 .info-value{
-    font-size:28px;
+    font-size:22px;
     font-weight:800;
     line-height:1.2;
 }
@@ -205,8 +205,8 @@ body{
 }
 
 .section-head{
-    padding:14px 18px;
-    font-size:20px;
+    padding:12px 15px;
+    font-size:17px;
     font-weight:800;
     color:var(--primary-dark);
     border-bottom:1px solid var(--border);
@@ -227,8 +227,8 @@ body{
 }
 
 .custom-table th{
-    font-size:13px;
-    padding:13px;
+    font-size:12px;
+    padding:9px;
     color:var(--primary-dark);
     font-weight:800;
     border-color:#f7d3df !important;
@@ -236,8 +236,8 @@ body{
 }
 
 .custom-table td{
-    padding:13px;
-    font-size:13px;
+    padding:9px;
+    font-size:12px;
     border-color:#f8dfe7 !important;
 }
 
@@ -252,11 +252,11 @@ body{
 
 /* ================= CHART ================= */
 
-.chart-box{
+/* .chart-box{
     background:#fff;
     border:1px solid var(--border);
     border-radius:14px;
-    padding:18px;
+    padding:14px;
     box-shadow:0 2px 6px rgba(176,18,74,0.05);
 }
 
@@ -265,13 +265,14 @@ body{
     font-size:18px;
     font-weight:800;
     margin-bottom:18px;
-}
+} */
+
 
 /* ================= COLORFUL PIE CHART ================= */
 
-.fake-chart{
-    width:230px;
-    height:230px;
+/* .fake-chart{
+    width:170px;
+    height:170px;
     border-radius:50%;
     margin:auto;
 
@@ -290,15 +291,131 @@ body{
 
 .fake-chart::after{
     content:'';
-    width:100px;
-    height:100px;
+    width:75px;
+    height:75px;
     background:#fff;
     border-radius:50%;
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+} */
+
+/* ================= CHART BOX ================= */
+
+.chart-box{
+    background:#fff;
+    border:1px solid #d9e0ef;
+    border-radius:10px;
+    padding:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.05);
 }
+
+.chart-title{
+    font-size:17px;
+    font-weight:700;
+    color:#18479d;
+    margin-bottom:18px;
+}
+
+.chart-flex{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* ================= PIE CHART ================= */
+
+.budget-chart{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    position:relative;
+    flex-shrink:0;
+}
+
+/* DONUT HOLE */
+
+.budget-chart::after{
+    content:'';
+    position:absolute;
+    width:85px;
+    height:85px;
+    background:#fff;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* INCOME CHART */
+
+.income-chart{
+    background:
+    conic-gradient(
+        #28a745 0% 36%,
+        #1e88e5 36% 60%,
+        #f6b100 60% 69.8%,
+        #7b1fa2 69.8% 85.8%,
+        #ec407a 85.8% 94%,
+        #00acc1 94% 100%
+    );
+}
+
+/* EXPENSE CHART */
+
+.expense-chart{
+    background:
+    conic-gradient(
+        #28a745 0% 12.1%,
+        #1e88e5 12.1% 35%,
+        #f6b100 35% 49.8%,
+        #7b1fa2 49.8% 62.7%,
+        #ec407a 62.7% 71.3%,
+        #00acc1 71.3% 76.7%,
+        #26a69a 76.7% 82.5%,
+        #bc8f6f 82.5% 87.4%,
+        #b0bec5 87.4% 100%
+    );
+}
+
+/* ================= LEGEND ================= */
+
+.chart-legend{
+    flex:1;
+    min-width:240px;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    font-size:13px;
+    font-weight:600;
+    color:#374151;
+}
+
+.legend-color{
+    width:14px;
+    height:14px;
+    border-radius:3px;
+    display:inline-block;
+}
+
+/* COLORS */
+
+.green{ background:#28a745; }
+.blue{ background:#1e88e5; }
+.yellow{ background:#f6b100; }
+.purple{ background:#7b1fa2; }
+.pink{ background:#ec407a; }
+.cyan{ background:#00acc1; }
+.teal{ background:#26a69a; }
+.brown{ background:#bc8f6f; }
+.gray{ background:#b0bec5; }
 
 /* ================= NOTE ================= */
 
@@ -306,7 +423,7 @@ body{
     background:#fffdf7;
     border:1px solid #f3e4b7;
     border-radius:14px;
-    padding:20px 24px;
+    padding:16px 18px;
 
     display:flex;
     justify-content:space-between;
@@ -337,7 +454,7 @@ body{
 }
 
 .note-title{
-    font-size:22px;
+    font-size:18px;
     font-weight:800;
     color:#374151;
     margin-bottom:8px;
@@ -353,7 +470,7 @@ body{
     color:#475569;
     font-weight:600;
     line-height:1.5;
-    font-size:14px;
+    font-size:13px;
 }
 
 /* ================= PDF BUTTON ================= */
@@ -378,6 +495,11 @@ body{
     white-space:nowrap;
 }
 
+.pdf-btn,
+.pdf-download-btn{
+    padding:10px 16px;
+    font-size:14px;
+}
 .pdf-download-btn:hover{
     background:#2563eb;
     color:#fff;
@@ -390,6 +512,21 @@ body{
     color:#6b7280;
     font-weight:600;
     font-size:14px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.chart-flex{
+    flex-direction:column;
+    align-items:center;
+}
+
+.chart-legend{
+    width:100%;
+}
+
 }
 
 /* ================= MOBILE ================= */
@@ -561,200 +698,332 @@ PDF डाउनलोड करा
 
 </div>
 
-<!-- TABLES -->
+<!-- ================= TABLES ================= -->
 
 <div class="row g-4 mt-1">
 
-<div class="col-lg-6">
+    <!-- INCOME TABLE -->
 
-<div class="section-box">
+    <div class="col-lg-6">
 
-<div class="section-head">
-उत्पन्नाचे स्रोत (अपेक्षित)
+        <div class="section-box">
+
+            <div class="section-head">
+                <i class="fa-solid fa-wallet me-2"></i>
+                उत्पन्नाचे स्रोत (अपेक्षित)
+            </div>
+
+            <table class="table custom-table table-bordered align-middle">
+
+                <thead>
+                    <tr>
+                        <th style="width:70px;">अ. क्र.</th>
+                        <th>उत्पन्नाचे स्रोत</th>
+                        <th style="width:140px;">रक्कम (₹)</th>
+                        <th style="width:120px;">टक्केवारी (%)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>केंद्र शासन अनुदान</td>
+                        <td>45,20,000</td>
+                        <td>36.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>राज्य शासन अनुदान</td>
+                        <td>30,15,000</td>
+                        <td>24.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>स्वतःचे उत्पन्न (कर व शुल्क)</td>
+                        <td>12,35,500</td>
+                        <td>9.8%</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>मनरेगा अनुदान</td>
+                        <td>20,10,000</td>
+                        <td>16.0%</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>वित्त आयोग अनुदान</td>
+                        <td>10,25,000</td>
+                        <td>8.2%</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>इतर प्राप्ती / व्याज</td>
+                        <td>7,43,250</td>
+                        <td>5.9%</td>
+                    </tr>
+
+                    <tr class="fw-bold total-row">
+                        <td colspan="2">एकूण</td>
+                        <td>₹ 1,25,48,750</td>
+                        <td>100%</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- EXPENSE TABLE -->
+
+    <div class="col-lg-6">
+
+        <div class="section-box">
+
+            <div class="section-head">
+                <i class="fa-solid fa-indian-rupee-sign me-2"></i>
+                खर्चाचे विभाग (अपेक्षित)
+            </div>
+
+            <table class="table custom-table table-bordered align-middle">
+
+                <thead>
+                    <tr>
+                        <th style="width:70px;">अ. क्र.</th>
+                        <th>खर्चाचे विभाग</th>
+                        <th style="width:140px;">रक्कम (₹)</th>
+                        <th style="width:120px;">टक्केवारी (%)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>सर्वसाधारण प्रशासन</td>
+                        <td>15,20,000</td>
+                        <td>12.1%</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>ग्रामविकास</td>
+                        <td>28,75,000</td>
+                        <td>22.9%</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>पाणी पुरवठा व स्वच्छता</td>
+                        <td>18,60,000</td>
+                        <td>14.8%</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>रस्ते व दळणवळण</td>
+                        <td>16,25,000</td>
+                        <td>12.9%</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>शिक्षण</td>
+                        <td>10,75,000</td>
+                        <td>8.6%</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>आरोग्य</td>
+                        <td>6,80,000</td>
+                        <td>5.4%</td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>सामाजिक व सांस्कृतिक विकास</td>
+                        <td>7,35,000</td>
+                        <td>5.8%</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>कृषी व नैसर्गिक साधनसंपत्ती</td>
+                        <td>6,15,000</td>
+                        <td>4.9%</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>इतर / आकस्मिक खर्च</td>
+                        <td>5,63,750</td>
+                        <td>4.5%</td>
+                    </tr>
+
+                    <tr class="fw-bold total-row">
+                        <td colspan="2">एकूण</td>
+                        <td>₹ 1,25,48,750</td>
+                        <td>100%</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
 </div>
-
-<table class="table custom-table table-bordered">
-
-<thead>
-<tr>
-<th>अ. क्र.</th>
-<th>उत्पन्नाचे स्रोत</th>
-<th>रक्कम</th>
-<th>टक्केवारी (%)</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>1</td>
-<td>केंद्र शासन अनुदान</td>
-<td>45,20,000</td>
-<td>36%</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>राज्य शासन अनुदान</td>
-<td>30,15,000</td>
-<td>24%</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>स्वतःचे उत्पन्न</td>
-<td>12,35,500</td>
-<td>9.8%</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>मनरेगा अनुदान</td>
-<td>20,10,000</td>
-<td>16%</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>वित्त आयोग अनुदान</td>
-<td>10,25,000</td>
-<td>8.2%</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>इतर प्राप्ती</td>
-<td>7,43,250</td>
-<td>5.9%</td>
-</tr>
-
-<tr class="fw-bold">
-<td colspan="2">एकूण</td>
-<td>₹ 1,25,48,750</td>
-<td>100%</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<div class="section-box">
-
-<div class="section-head">
-खर्चाचे विभाग (अपेक्षित)
-</div>
-
-<table class="table custom-table table-bordered">
-
-<thead>
-<tr>
-<th>अ. क्र.</th>
-<th>खर्चाचे विभाग</th>
-<th>रक्कम</th>
-<th>टक्केवारी (%)</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>1</td>
-<td>सर्वसाधारण प्रशासन</td>
-<td>15,20,000</td>
-<td>12.1%</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>ग्रामविकास</td>
-<td>28,75,000</td>
-<td>22.9%</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>पाणी पुरवठा</td>
-<td>18,60,000</td>
-<td>14.8%</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>रस्ते व वळणवाटा</td>
-<td>16,25,000</td>
-<td>12.9%</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>शिक्षण</td>
-<td>10,75,000</td>
-<td>8.6%</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>आरोग्य</td>
-<td>6,80,000</td>
-<td>5.4%</td>
-</tr>
-
-<tr class="fw-bold">
-<td colspan="2">एकूण</td>
-<td>₹ 1,25,48,750</td>
-<td>100%</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-
 <!-- CHARTS -->
 
+<!-- ================= CHARTS ================= -->
+
 <div class="row g-4 mt-1">
 
-<div class="col-lg-6">
+    <!-- INCOME CHART -->
 
-<div class="chart-box">
+    <div class="col-lg-6">
 
-<div class="chart-title">
-उत्पन्नाचे स्रोत (टक्केवारीनुसार)
+        <div class="chart-box">
+
+            <div class="chart-title">
+                <i class="fa-solid fa-chart-pie me-2"></i>
+                उत्पन्नाचे स्रोत (टक्केवारीनुसार)
+            </div>
+
+            <div class="chart-flex">
+
+                <!-- PIE -->
+
+                <div class="budget-chart income-chart"></div>
+
+                <!-- LEGEND -->
+
+                <div class="chart-legend">
+
+                    <div class="legend-item">
+                        <span class="legend-color green"></span>
+                        केंद्र शासन अनुदान (36%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color blue"></span>
+                        राज्य शासन अनुदान (24%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color yellow"></span>
+                        स्वतःचे उत्पन्न (9.8%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color purple"></span>
+                        मनरेगा अनुदान (16%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color pink"></span>
+                        वित्त आयोग अनुदान (8.2%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color cyan"></span>
+                        इतर प्राप्ती / व्याज (5.9%)
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- EXPENSE CHART -->
+
+    <div class="col-lg-6">
+
+        <div class="chart-box">
+
+            <div class="chart-title">
+                <i class="fa-solid fa-chart-pie me-2"></i>
+                खर्चाचे विभाग (टक्केवारीनुसार)
+            </div>
+
+            <div class="chart-flex">
+
+                <!-- PIE -->
+
+                <div class="budget-chart expense-chart"></div>
+
+                <!-- LEGEND -->
+
+                <div class="chart-legend">
+
+                    <div class="legend-item">
+                        <span class="legend-color green"></span>
+                        सर्वसाधारण प्रशासन (12.1%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color blue"></span>
+                        ग्रामविकास (22.9%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color yellow"></span>
+                        पाणी पुरवठा (14.8%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color purple"></span>
+                        रस्ते व दळणवळण (12.9%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color pink"></span>
+                        शिक्षण (8.6%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color cyan"></span>
+                        आरोग्य (5.4%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color teal"></span>
+                        सामाजिक विकास (5.8%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color brown"></span>
+                        कृषी व नैसर्गिक साधनसंपत्ती (4.9%)
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color gray"></span>
+                        इतर / आकस्मिक खर्च (4.5%)
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
-
-<div class="fake-chart"></div>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<div class="chart-box">
-
-<div class="chart-title">
-खर्चाचे विभाग (टक्केवारीनुसार)
-</div>
-
-<div class="fake-chart"></div>
-
-</div>
-
-</div>
-
-</div>
-
 <!-- NOTE -->
 
 <div class="bottom-box mt-4">
